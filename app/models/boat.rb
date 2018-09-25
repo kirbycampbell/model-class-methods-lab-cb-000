@@ -7,4 +7,3 @@ class Boat < ActiveRecord::Base
     all.limit(5)
   end
 end
-
