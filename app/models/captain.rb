@@ -19,7 +19,7 @@ class Captain < ActiveRecord::Base
   end
 
   def self.non_sailors
-    !self.sailors
+    where.not("id IN (?)", self.sailors.pluck(:id))
   end
 
 
